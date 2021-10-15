@@ -1,11 +1,15 @@
 <template lang="">
     <div>
         <h2>Hierarquia de componentes</h2>
-        <form action="">
-        <InputText value="1"/>
-        <br><br>
-        <InputText value="2"/>
-        <br><br>
+        <form action="" @submit.prevent="enviarForm($event)">
+         <div>
+             <input type="text" v-model="name">
+         </div>
+         <br>
+         <div>
+             <input type="text" v-model="email">
+         </div>
+         <br>
         <Submit/>
     </form>
     </div>
@@ -20,6 +24,20 @@ export default {
     components: {
         InputText,
         Submit
-    }
+    },
+    data() {
+        return {
+            name: "Bruno",
+            email: "bruno@mktouch.com.br"
+        }
+    },
+    methods: {
+        enviarForm(e) {
+            const name = this.name
+            const email = this.email
+
+            console.log(name, email)
+        }
+    },
 }
 </script>
