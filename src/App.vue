@@ -1,14 +1,16 @@
-<template lang="Vue">
-        <Header/>
-     <PrimeiroComponente/>   <!--Declaração do componente que será renderizado -->
-     <hr>
-     <LifeCycles/>
-     <hr>
-     <Pessoa/>
-     <hr>
-     <Form/>
-     <hr>
-     <p>LAST - 17</p>
+<template>
+    <Header
+        :esta_logado="status"
+    />
+    <PrimeiroComponente/>   <!--Declaração do componente que será renderizado -->
+    <hr>
+    <LifeCycles/>
+    <hr>
+    <Pessoa/>
+    <hr>
+    <Form/>
+    <hr>
+    <p>LAST - 17</p>
 </template>
 
 <script>
@@ -28,6 +30,11 @@ export default {
         LifeCycles,
         Pessoa,
         Form
+    },
+    data() {
+        return {
+            status:true
+        }
     }
 }
 </script>

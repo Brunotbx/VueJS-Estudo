@@ -1,4 +1,4 @@
-<template lang="">
+<template>
     <div>
         <button @click="primeiro('Primeiro Evento', $event), segundo('Segundo Evento', $event), terceiro()">Ativar multiplos eventos</button>
         <p>{{ multiplos_eventos }}</p>
@@ -12,7 +12,7 @@ export default {
 
     data() {
         return {
-            multiplos_eventos: ""
+            multiplos_eventos: "start"
         }
     },
 

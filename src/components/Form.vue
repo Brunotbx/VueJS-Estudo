@@ -1,4 +1,4 @@
-<template lang="">
+<template>
     <div>
         <h2>Hierarquia de componentes</h2>
         <form action="" @submit.prevent="enviarForm($event)">

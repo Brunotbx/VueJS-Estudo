@@ -1,6 +1,8 @@
-<template lang="">
+<template>
     <div>
-        <p v-if="trabalhando">Trabalha atualmente.</p>
+        <p> via Props - {{email}}</p>
+
+        <p v-if="working">Trabalha atualmente.</p>
         <p v-else> Não está trabalhando.</p>
         <p>Utiliza as seguintes stacks : </p>
         <ul>
@@ -25,10 +27,13 @@ export default {
     components: {
         Picture
     },
+    props: {
+        email: String,
+        working: Boolean
+    },
     data() {
         return {
             trabalhando: true,
-            email: 'bruno@mktouch.com.br',
             show: false,
             link: 'https://github.com/Brunotbx',
             buttonText: "Mostrar contato"

@@ -1,4 +1,4 @@
-<template lang="">
+<template>
     <div>
         <button @click="ativar">Clique aqui</button>
         <span v-show="ativou">Ativou!</span>

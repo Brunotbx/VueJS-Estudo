@@ -1,7 +1,10 @@
-<template lang="">
+<template>
     <div>
         <h2>Este componente descreve o usuário: {{ nome }}</h2>
-        <Info/>
+        <Info 
+            :email="email"
+            :working="working"
+        />
     </div>
 </template>
 
@@ -18,7 +21,9 @@ export default {
 
     data() {
         return {
-            nome: "Bruno"
+            nome: "Bruno",
+            email: "bruno@mktouch.com.br",
+            working: true
         }
     },
 }

@@ -1,4 +1,4 @@
-<template lang="">
+<template>
     <div>
         <h1>Material de estudos em VueJS 3</h1>
         <hr>

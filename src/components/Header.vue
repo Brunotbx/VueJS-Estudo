@@ -1,4 +1,4 @@
-<template lang="">
+<template>
     <ul>
         <li>
             <a href="#">Home</a>
@@ -9,12 +9,19 @@
         <li>
             <a href="#">Contato</a>
         </li>
+        <li v-if="esta_logado">
+            <a href="#">Meu Perfil</a>
+        </li>
+        
     </ul>
 </template>
 
 <script>
 export default {
-    name: 'Header'
+    name: 'Header',
+    props: [
+        "esta_logado"
+    ]
 }
 </script>
 

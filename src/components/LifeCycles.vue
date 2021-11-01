@@ -1,4 +1,4 @@
-<template lang="">
+<template>
     <div>
         <h2>Life Cycle exemple: {{ informacao }}</h2>
     </div>
