@@ -1,49 +1,49 @@
 <template>
-    <Header
-        :esta_logado="status"
-    />
-    <PrimeiroComponente/>   <!--Declaração do componente que será renderizado -->
-    <hr>
-    <LifeCycles/>
-    <hr>
-    <Pessoa/>
-    <hr>
-    <Form/>
-    <hr>
-    <p>LAST - 17</p>
+    <Navbar
+		:logo="logo_src"
+		:alt="app_name"
+	/>
+    <router-view/>
+	<Footer/>
 </template>
 
 <script>
-/* LOCAL PARA IMPORTAR COMPONENTES */
-import Header from './components/Header.vue';
-import PrimeiroComponente from './components/PrimeiroComponente.vue';
-import LifeCycles from './components/LifeCycles.vue';
-import Pessoa from './components/Pessoa.vue';
-import Form from './components/Form.vue';
+import Navbar from "./components/Navbar.vue"
+import Footer from "./components/Footer.vue"
 
 export default {
-    name: 'App',    /* nome DESTE componente */
-
-    components: {   /* Local para declaração dos componentes */
-        Header,
-        PrimeiroComponente,
-        LifeCycles,
-        Pessoa,
-        Form
-    },
-    data() {
-        return {
-            status:true
-        }
-    }
+	components: {
+		Navbar,
+		Footer
+	},
+	data() {
+		return {
+			logo_src: "/img/logo.png",
+			app_name: "Make Burger"
+		}
+	}
 }
 </script>
 
 <style>
-    body {
-        background-color: rgb(231, 231, 231);
-    }
-    a {
-        color: red;
-    }
+	@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+	* {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+		font-family: 'Poppins', sans-serif;
+	}
+
+	.main-container {
+		margin: 50px;
+		min-height: 250px;
+	}
+
+	h1 {
+		text-align: center;
+		font-size: 42px;
+		margin-bottom: 30px;
+		color: #222;
+	}
+
 </style>

@@ -1,4 +1,4 @@
-# project-2
+# hamburgueria
 
 ## Project setup
 ```
