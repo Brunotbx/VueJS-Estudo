@@ -13,9 +13,9 @@ export default {
 <style scoped>
     #main-banner {
         background-image: url('/img/burger.jpg');
-        background-position: center;
+        background-position: bottom;
         background-size: cover;
-        height: 500px;
+        height: calc(100vh - 76px);
         display: flex;
         align-items: center;
         justify-content: left;
